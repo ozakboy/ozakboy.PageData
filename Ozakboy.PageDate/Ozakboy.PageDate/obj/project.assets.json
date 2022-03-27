@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageDate\\Ozakboy.PageDate\\Ozakboy.PageDate.csproj",
-      "projectName": "Ozakboy.PageDate",
-      "projectPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageDate\\Ozakboy.PageDate\\Ozakboy.PageDate.csproj",
+      "projectUniqueName": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageDate\\Ozakboy.PageDate\\Ozakboy.PageData.csproj",
+      "projectName": "Ozakboy.PageData",
+      "projectPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageDate\\Ozakboy.PageDate\\Ozakboy.PageData.csproj",
       "packagesPath": "C:\\Users\\WIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageDate\\Ozakboy.PageDate\\obj\\",
       "projectStyle": "PackageReference",
