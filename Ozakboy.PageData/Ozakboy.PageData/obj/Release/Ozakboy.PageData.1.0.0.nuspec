@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Ozakboy.PageData</id>
+    <version>1.0.0</version>
+    <authors>ozakboy</authors>
+    <projectUrl>https://github.com/ozakboy/ozakboy.PageData</projectUrl>
+    <description>分頁套件</description>
+    <repository url="https://github.com/ozakboy/ozakboy.PageData" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\bin\Release\net6.0\Ozakboy.PageData.dll" target="lib\net6.0\Ozakboy.PageData.dll" />
+  </files>
+</package>

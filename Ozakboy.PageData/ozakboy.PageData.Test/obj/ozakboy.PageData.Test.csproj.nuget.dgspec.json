@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj": {}
+    "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj": {
+    "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj",
+        "projectUniqueName": "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj",
         "projectName": "ozakboy.PageData.Test",
-        "projectPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj",
+        "projectPath": "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj",
         "packagesPath": "C:\\Users\\WIN\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\obj\\",
         "projectStyle": "PackageReference",
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj": {
-                "projectPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj"
+              "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj": {
+                "projectPath": "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj"
               }
             }
           }
@@ -67,12 +67,12 @@
         }
       }
     },
-    "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj": {
+    "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj",
+        "projectUniqueName": "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj",
         "projectName": "Ozakboy.PageData",
-        "projectPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj",
+        "projectPath": "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj",
         "packagesPath": "C:\\Users\\WIN\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\obj\\",
         "projectStyle": "PackageReference",
