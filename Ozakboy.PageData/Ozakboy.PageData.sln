@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozakboy.PageData", "Ozakboy.PageData\Ozakboy.PageData.csproj", "{9EA06D3E-8215-4A4B-A28B-92AD846F01B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ozakboy.PageData", "Ozakboy.PageData\Ozakboy.PageData.csproj", "{9EA06D3E-8215-4A4B-A28B-92AD846F01B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ozakboy.PageData.Test", "ozakboy.PageData.Test\ozakboy.PageData.Test.csproj", "{1001BBBF-FB77-411E-806C-5F476C214569}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9EA06D3E-8215-4A4B-A28B-92AD846F01B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EA06D3E-8215-4A4B-A28B-92AD846F01B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EA06D3E-8215-4A4B-A28B-92AD846F01B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1001BBBF-FB77-411E-806C-5F476C214569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1001BBBF-FB77-411E-806C-5F476C214569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1001BBBF-FB77-411E-806C-5F476C214569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1001BBBF-FB77-411E-806C-5F476C214569}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
