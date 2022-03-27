@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Ozakboy.PageData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Ozakboy.PageData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ozakboy.PageData.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Ozakboy.PageData/1.0.0": {
+      "type": "project",
+      "path": "../Ozakboy.PageData/Ozakboy.PageData.csproj",
+      "msbuildProject": "../Ozakboy.PageData/Ozakboy.PageData.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Ozakboy.PageData >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\WIN\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj": {
+              "projectPath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData\\Ozakboy.PageData.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

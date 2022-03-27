@@ -1,0 +1,12 @@
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\bin\Debug\net6.0\Ozakboy.PageData.deps.json
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\bin\Debug\net6.0\Ozakboy.PageData.dll
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\bin\Debug\net6.0\Ozakboy.PageData.pdb
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\Ozakboy.PageData.csproj.AssemblyReference.cache
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\Ozakboy.PageData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\Ozakboy.PageData.AssemblyInfoInputs.cache
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\Ozakboy.PageData.AssemblyInfo.cs
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\Ozakboy.PageData.csproj.CoreCompileInputs.cache
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\Ozakboy.PageData.dll
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\refint\Ozakboy.PageData.dll
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\Ozakboy.PageData.pdb
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Debug\net6.0\ref\Ozakboy.PageData.dll
