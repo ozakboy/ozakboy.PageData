@@ -4,6 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>ozakboy</Authors>
+    <Description>分頁套件</Description>
+    <PackageProjectUrl>https://github.com/ozakboy/ozakboy.PageData</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ozakboy/ozakboy.PageData</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
