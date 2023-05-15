@@ -2,7 +2,9 @@
 
 ## 要求
 
-ASP.net Core 6
+1. .net core 3.1
+2. .net 6
+3. .net 7
 
 ## 功能
 
