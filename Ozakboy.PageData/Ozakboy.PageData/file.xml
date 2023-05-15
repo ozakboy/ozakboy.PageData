@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ozakboy.PageData</name>
+    </assembly>
+    <members>
+        <member name="T:Ozakboy.PageData.ASearchPageInfo">
+            <summary>
+            搜尋指定頁數資料
+            </summary>
+        </member>
+        <member name="P:Ozakboy.PageData.ASearchPageInfo.Page">
+            <summary>
+            當前頁數
+            </summary>
+        </member>
+        <member name="P:Ozakboy.PageData.ASearchPageInfo.Limit">
+            <summary>
+            每頁限制顯示數
+            </summary>
+        </member>
+        <member name="T:Ozakboy.PageData.PageInfo">
+            <summary>
+            分頁資訊
+            </summary>
+        </member>
+        <member name="P:Ozakboy.PageData.PageInfo.Page">
+            <summary>
+            目前頁數
+            </summary>
+        </member>
+        <member name="P:Ozakboy.PageData.PageInfo.Limit">
+            <summary>
+            每頁數量
+            </summary>
+        </member>
+        <member name="P:Ozakboy.PageData.PageInfo.Total">
+            <summary>
+            資料總比數
+            </summary>
+        </member>
+        <member name="P:Ozakboy.PageData.PageInfo.TotalPage">
+            <summary>
+            總頁數
+            </summary>
+        </member>
+        <member name="T:Ozakboy.PageData.VPageData`1">
+            <summary>
+            分頁式資料回傳架構
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Ozakboy.PageData.VPageData`1.PageData">
+            <summary>
+            呈現資料
+            </summary>
+        </member>
+        <member name="P:Ozakboy.PageData.VPageData`1.PageInfo">
+            <summary>
+            分頁資訊
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Ozakboy.PageData/1.0.0": {
+      "Ozakboy.PageData/1.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
@@ -15,7 +15,7 @@
     }
   },
   "libraries": {
-    "Ozakboy.PageData/1.0.0": {
+    "Ozakboy.PageData/1.0.1": {
       "type": "project",
       "path": "../Ozakboy.PageData/Ozakboy.PageData.csproj",
       "msbuildProject": "../Ozakboy.PageData/Ozakboy.PageData.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Ozakboy.PageData >= 1.0.0"
+      "Ozakboy.PageData >= 1.0.1"
     ]
   },
   "packageFolders": {
