@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PSj+UK1MNEoLd3NFvhHNQcnd9YOGQtc7Gc9AiMBqvaxeztMntUpHG/LdHbrENXU/EEIonY0jqoUe1KKPo4CWbQ==",
+  "dgSpecHash": "O1JOHQwRTO7SPwjbxecUlkAnZjS2L4N9g+qE+WTRO2SbpT6ZerkC+Wp77uJflXkzo6pnbS3ydQMVX8U1yBi7gA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WIN\\Source\\Repos\\ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\WIN\\source\\repos\\Ozakboy\\ozakboy.PageData\\Ozakboy.PageData\\ozakboy.PageData.Test\\ozakboy.PageData.Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WIN\\.nuget\\packages\\ozakboy.pagedata\\1.0.0\\ozakboy.pagedata.1.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
