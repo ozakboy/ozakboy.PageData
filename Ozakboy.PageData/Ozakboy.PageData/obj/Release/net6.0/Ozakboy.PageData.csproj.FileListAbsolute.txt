@@ -2,7 +2,6 @@ C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.Page
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\bin\Release\net6.0\Ozakboy.PageData.dll
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\bin\Release\net6.0\Ozakboy.PageData.pdb
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\bin\Release\net6.0\file.xml
-C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\Ozakboy.PageData.csproj.AssemblyReference.cache
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\Ozakboy.PageData.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\Ozakboy.PageData.AssemblyInfoInputs.cache
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\Ozakboy.PageData.AssemblyInfo.cs
@@ -11,3 +10,4 @@ C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.Page
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\refint\Ozakboy.PageData.dll
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\Ozakboy.PageData.pdb
 C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\ref\Ozakboy.PageData.dll
+C:\Users\WIN\source\repos\Ozakboy\ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData\obj\Release\net6.0\Ozakboy.PageData.sourcelink.json

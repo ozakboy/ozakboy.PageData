@@ -29,9 +29,9 @@ dotnet add package Ozakboy.PageData
 
 ## 支援框架
 
-- .NET Core 3.1
 - .NET 6.0
 - .NET 7.0
+- .NET 8.0
 
 ## 核心元件
 
