@@ -411,3 +411,7 @@ FodyWeavers.xsd
 /Ozakboy.PageData/ozakboy.PageData.Test/obj/ozakboy.PageData.Test.csproj.nuget.dgspec.json
 /Ozakboy.PageData/ozakboy.PageData.Test/obj/project.assets.json
 /Ozakboy.PageData/ozakboy.PageData.Test/obj/project.nuget.cache
+/Ozakboy.PageData/Ozakboy.PageData/obj/Debug/net6.0/Ozakboy.PageData.assets.cache
+/Ozakboy.PageData/Ozakboy.PageData/obj/Debug/net6.0/Ozakboy.PageData.GeneratedMSBuildEditorConfig.editorconfig
+/Ozakboy.PageData/Ozakboy.PageData/obj/Ozakboy.PageData.csproj.nuget.g.props
+/Ozakboy.PageData/Ozakboy.PageData/obj/Ozakboy.PageData.csproj.nuget.g.targets
