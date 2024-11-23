@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ozakboy.PageData
+namespace Ozakboy.PageData.Core.Abstract
 {
     /// <summary>
     /// 搜尋指定頁數資料
@@ -15,7 +15,7 @@ namespace Ozakboy.PageData
         /// <summary>
         /// 當前頁數
         /// </summary>
-        public int Page { get { return (_page < 1 ? 1 : _page); } set { _page = value; } }
+        public int Page { get { return _page < 1 ? 1 : _page; } set { _page = value; } }
 
         /// <summary>
         /// 每頁限制顯示數

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ozakboy.PageData
+namespace Ozakboy.PageData.Core.Models
 {
     /// <summary>
     /// 分頁資訊
@@ -14,10 +14,10 @@ namespace Ozakboy.PageData
         public PageInfo() { }
         public PageInfo(int _page, int _Limit, int _total)
         {
-            this.Page = _page;
-            this.Limit = _Limit;
-            this.Total = _total;
-            this.TotalPage = (int)Math.Ceiling(((double)_total / (double)_Limit));
+            Page = _page;
+            Limit = _Limit;
+            Total = _total;
+            TotalPage = (int)Math.Ceiling(_total / (double)_Limit);
         }
         /// <summary>
         /// 目前頁數

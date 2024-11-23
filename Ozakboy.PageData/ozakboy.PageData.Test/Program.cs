@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Ozakboy.PageData;
+using Ozakboy.PageData.Core.Extensions;
 Console.WriteLine("Hello, World!");
 
 
