@@ -61,5 +61,9 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="..\..\README_zh-TW.md"></None>
+  </ItemGroup>
 
 </Project>

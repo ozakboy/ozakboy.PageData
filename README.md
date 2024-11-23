@@ -3,114 +3,142 @@
 [![nuget](https://img.shields.io/badge/nuget-ozakboy.PageData-blue)](https://www.nuget.org/packages/Ozakboy.PageData/) 
 [![github](https://img.shields.io/badge/github-ozakboy.PageData-blue)](https://github.com/ozakboy/ozakboy.PageData)
 
-一個提供資料分頁功能的 .NET 函式庫。
+[English](README.md) | [繁體中文](README_zh-TW.md) 
 
-## 功能特色
+A lightweight and flexible pagination library for .NET applications. Easily implement pagination functionality in your applications with support for various data sources including Lists, IQueryable, and IEnumerable.
 
-- 簡單高效的分頁實現
-- 支援多種集合類型 (List<T>, IQueryable<T>, IEnumerable<T>)
-- 便捷的擴充方法
-- 內建分頁資訊追蹤
-- 支援多個 .NET 版本
+## Features
 
-## 安裝方式
+- Simple and intuitive pagination implementation
+- Support for multiple data source types (List<T>, IQueryable<T>, IEnumerable<T>)
+- Flexible page size configuration
+- Complete paging information
+- Data transformation support
+- Extension methods for easy integration
+- Compatible with Entity Framework Core queries
 
-透過 NuGet Package Manager 安裝：
+## Installation
+
+Install via NuGet Package Manager:
 
 ```bash
 Install-Package Ozakboy.PageData
 ```
 
-或使用 .NET CLI：
+Or via .NET CLI:
 
 ```bash
 dotnet add package Ozakboy.PageData
 ```
 
-## 支援框架
+## Supported Frameworks
 
 - .NET 6.0
 - .NET 7.0
 - .NET 8.0
 
-## 核心元件
+## Core Components
 
-### 類別
+### 1. PageInfo
+Contains basic pagination information:
+- Current page number
+- Items per page (Limit)
+- Total items count
+- Total pages
 
-1. `VPageData<T>`
-   - 分頁資料的主要容器
-   - 同時包含資料內容和分頁資訊
-   - 支援泛型型別
+### 2. VPageData<T>
+Generic class that holds:
+- Paginated data (List<T>)
+- Page information (PageInfo)
 
-2. `PageInfo`
-   - 包含分頁的相關資訊
-   - 屬性：
-     - `Page`：目前頁數
-     - `Limit`：每頁顯示數量
-     - `Total`：資料總筆數
-     - `TotalPage`：總頁數
+### 3. ASearchPageInfo
+Abstract base class for search parameters:
+- Base page number property
+- Default limit (items per page) property
 
-3. `ASearchPageInfo`（抽象類別）
-   - 實作自訂搜尋分頁的基底類別
-   - 預設每頁顯示 10 筆資料
-   - 最小頁數為 1
+## Usage Examples
 
-### 擴充方法
-
-`ToPageData` 擴充方法支援多種簽章：
-
-```csharp
-// 用於 List<T>
-List<T>.ToPageData(page, limit)
-List<T>.ToPageData(page, limit, total)
-
-// 用於 IQueryable<T>
-IQueryable<T>.ToPageData(page, limit)
-IQueryable<T>.ToPageData(page, limit, total)
-
-// 用於 IEnumerable<T>
-IEnumerable<T>.ToPageData(page, limit)
-IEnumerable<T>.ToPageData(page, limit, total)
-```
-
-## 使用範例
+### Basic Usage
 
 ```csharp
 using Ozakboy.PageData;
 
-// List<T> 範例
-var myList = new List<string> { "A", "B", "C", "D", "E" };
-var pagedResult = myList.ToPageData(page: 1, limit: 2);
+// With List<T>
+var myList = new List<string>() { "item1", "item2", "item3", ... };
+var pagedResult = myList.ToPageData(page: 1, limit: 10);
 
-// IQueryable 範例
-var queryable = dbContext.Users.Where(u => u.IsActive);
-var pagedUsers = queryable.ToPageData(page: 1, limit: 10);
+// With IQueryable (e.g., Entity Framework)
+var query = dbContext.Users.Where(u => u.IsActive);
+var pagedUsers = query.ToPageData(page: 1, limit: 10);
 
-// 存取結果
-foreach (var item in pagedResult.PageData)
-{
-    Console.WriteLine(item);
-}
-
-// 存取分頁資訊
-Console.WriteLine($"目前頁數：{pagedResult.PageInfo.Page}");
-Console.WriteLine($"總頁數：{pagedResult.PageInfo.TotalPage}");
-Console.WriteLine($"總筆數：{pagedResult.PageInfo.Total}");
+// With IEnumerable
+IEnumerable<Product> products = GetProducts();
+var pagedProducts = products.ToPageData(page: 1, limit: 10);
 ```
 
-## 授權條款
+### With Data Transformation
 
-本專案採用 LICENSE 檔案中所述之條款授權。
+```csharp
+var pagedResult = query.ToPageData(1, 10)
+    .Select(user => new UserDto 
+    {
+        Id = user.Id,
+        Name = user.Name
+    });
+```
 
-## 貢獻指南
+### Custom Search Parameters
 
-歡迎提交貢獻！請隨時提交 Pull Request。
+```csharp
+public class UserSearchParams : ASearchPageInfo
+{
+    public string? SearchName { get; set; }
+    public bool? IsActive { get; set; }
+}
 
-## 相關連結
+// Usage
+var searchParams = new UserSearchParams 
+{
+    Page = 1,
+    Limit = 10,
+    SearchName = "John"
+};
+```
 
-- [NuGet 套件](https://www.nuget.org/packages/Ozakboy.PageData/)
-- [GitHub 儲存庫](https://github.com/ozakboy/ozakboy.PageData)
+### Accessing Page Information
 
-## 套件說明
+```csharp
+var result = query.ToPageData(1, 10);
 
-這是一個簡單易用的分頁套件，主要用於處理大量資料的分頁顯示需求。透過簡潔的 API 設計，讓開發者能夠輕鬆實現資料分頁功能，提升應用程式的效能和使用者體驗。
+Console.WriteLine($"Current Page: {result.PageInfo.Page}");
+Console.WriteLine($"Items Per Page: {result.PageInfo.Limit}");
+Console.WriteLine($"Total Items: {result.PageInfo.Total}");
+Console.WriteLine($"Total Pages: {result.PageInfo.TotalPage}");
+```
+
+## Extension Methods
+
+The library provides several extension methods through `ToPageDataExtensions`:
+
+- `ToPageData<T>(this List<T>, int page, int limit)`
+- `ToPageData<T>(this List<T>, int page, int limit, int total)`
+- `ToPageData<T>(this IQueryable<T>, int page, int limit)`
+- `ToPageData<T>(this IQueryable<T>, int page, int limit, int total)`
+- `ToPageData<T>(this IEnumerable<T>, int page, int limit)`
+- `ToPageData<T>(this IEnumerable<T>, int page, int limit, int total)`
+
+## License
+
+This project is licensed under the terms specified in the LICENSE file.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Author
+
+- ozakboy
+
+## Support
+
+If you encounter any issues or have questions, please file an issue on the GitHub repository.
