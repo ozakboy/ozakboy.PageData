@@ -400,3 +400,8 @@ FodyWeavers.xsd
 **/.vs/
 **/bin/
 **/obj/
+/.vs/slnx.sqlite
+/Ozakboy.PageData/Ozakboy.PageData/obj/Debug/net6.0/Ozakboy.PageData.AssemblyInfo.cs
+/Ozakboy.PageData/Ozakboy.PageData/obj/Debug/net6.0/Ozakboy.PageData.AssemblyInfoInputs.cache
+/Ozakboy.PageData/ozakboy.PageData.Test/obj/Debug/net6.0/ozakboy.PageData.Test.AssemblyInfo.cs
+/Ozakboy.PageData/ozakboy.PageData.Test/obj/Debug/net6.0/ozakboy.PageData.Test.AssemblyInfoInputs.cache
