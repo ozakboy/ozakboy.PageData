@@ -1,9 +1,7 @@
-﻿
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Ozakboy.PageData.Core.Models
+namespace Ozakboy.PageData
 {
     /// <summary>
     /// 分頁式資料回傳架構

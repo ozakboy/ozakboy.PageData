@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ozakboy.PageData.Core.Models;
 
-namespace Ozakboy.PageData.Core.Extensions
+namespace Ozakboy.PageData
 {
     public static class ToPageDataHelper
     {

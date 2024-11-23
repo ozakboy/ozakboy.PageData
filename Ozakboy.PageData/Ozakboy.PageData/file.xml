@@ -4,58 +4,58 @@
         <name>Ozakboy.PageData</name>
     </assembly>
     <members>
-        <member name="T:Ozakboy.PageData.Core.Abstract.ASearchPageInfo">
+        <member name="T:Ozakboy.PageData.ASearchPageInfo">
             <summary>
             搜尋指定頁數資料
             </summary>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Abstract.ASearchPageInfo.Page">
+        <member name="P:Ozakboy.PageData.ASearchPageInfo.Page">
             <summary>
             當前頁數
             </summary>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Abstract.ASearchPageInfo.Limit">
+        <member name="P:Ozakboy.PageData.ASearchPageInfo.Limit">
             <summary>
             每頁限制顯示數
             </summary>
         </member>
-        <member name="T:Ozakboy.PageData.Core.Models.PageInfo">
+        <member name="T:Ozakboy.PageData.PageInfo">
             <summary>
             分頁資訊
             </summary>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Models.PageInfo.Page">
+        <member name="P:Ozakboy.PageData.PageInfo.Page">
             <summary>
             目前頁數
             </summary>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Models.PageInfo.Limit">
+        <member name="P:Ozakboy.PageData.PageInfo.Limit">
             <summary>
             每頁數量
             </summary>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Models.PageInfo.Total">
+        <member name="P:Ozakboy.PageData.PageInfo.Total">
             <summary>
             資料總比數
             </summary>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Models.PageInfo.TotalPage">
+        <member name="P:Ozakboy.PageData.PageInfo.TotalPage">
             <summary>
             總頁數
             </summary>
         </member>
-        <member name="T:Ozakboy.PageData.Core.Models.VPageData`1">
+        <member name="T:Ozakboy.PageData.VPageData`1">
             <summary>
             分頁式資料回傳架構
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Models.VPageData`1.PageData">
+        <member name="P:Ozakboy.PageData.VPageData`1.PageData">
             <summary>
             呈現資料
             </summary>
         </member>
-        <member name="P:Ozakboy.PageData.Core.Models.VPageData`1.PageInfo">
+        <member name="P:Ozakboy.PageData.VPageData`1.PageInfo">
             <summary>
             分頁資訊
             </summary>
