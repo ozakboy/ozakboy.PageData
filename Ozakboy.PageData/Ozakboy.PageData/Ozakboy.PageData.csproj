@@ -4,17 +4,51 @@
     <TargetFrameworks>net6.0;net7.0;net8.0;</TargetFrameworks>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.1</PackageVersion>
     <Authors>ozakboy</Authors>
-    <Description>分頁套件</Description>
+
+    <!-- 更詳細的套件描述 -->
+    <Description>
+      A lightweight and flexible pagination library for .NET applications.
+      Supports List, IQueryable, and IEnumerable data sources with easy-to-use extension methods.
+      Features:
+      - Simple pagination implementation
+      - Support for EF Core queries
+      - Flexible page size configuration
+      - Complete paging information
+      - Data transformation support
+    </Description>
+
+    <!-- 關鍵字標籤 -->
+    <PackageTags>pagination;paging;ef-core;linq;data</PackageTags>
+
+    <!-- 套件相關資訊 -->
+    <Title>Ozakboy.PageData - Simple .NET Pagination Library</Title>
+    <PackageReleaseNotes>
+      Version 1.0.1:
+      - Initial release
+      - Support for  .NET 6 , .NET 7, .NET 8
+      - Basic pagination functionality
+      - Extension methods for List, IQueryable, and IEnumerable
+    </PackageReleaseNotes>
+
+    <!-- 版權宣告 -->
+    <Copyright>Copyright (c) 2024 ozakboy</Copyright>
+
+    <!-- 專案連結 -->
     <PackageProjectUrl>https://github.com/ozakboy/ozakboy.PageData</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ozakboy/ozakboy.PageData</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- 文件產生設定 -->
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>file.xml</DocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryType>github</RepositoryType>
+
+    <!-- 授權設定 -->
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>    
+    
   </PropertyGroup>
 
   <ItemGroup>

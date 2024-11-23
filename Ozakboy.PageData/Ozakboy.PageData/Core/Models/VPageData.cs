@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Ozakboy.PageData
@@ -39,6 +40,12 @@ namespace Ozakboy.PageData
         {
             PageData = _Data.ToList();
             PageInfo = new PageInfo(_page, _Limit, Count);
+        }
+
+        public VPageData<TResult> Select<TResult>(Func<T, TResult> selector)
+        {
+            var transformedData = PageData.ConvertAll(x => selector(x));
+            return new VPageData<TResult>(transformedData, PageInfo.Page, PageInfo.Limit, PageInfo.Total);
         }
 
 

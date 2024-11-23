@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Ozakboy.PageData
 {
-    public static class ToPageDataHelper
+    public static class ToPageDataExtensions
     {
         public static VPageData<T> ToPageData<T>(this List<T> _Data, int _page, int _Limit, int _total)
         {
