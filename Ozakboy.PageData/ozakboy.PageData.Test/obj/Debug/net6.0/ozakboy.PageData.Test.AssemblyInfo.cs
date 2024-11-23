@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ozakboy.PageData.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9471461c02c5338759c539614762f94ff6bad35d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68acb863951dae661e3f119568df7aa77c3b023d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ozakboy.PageData.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ozakboy.PageData.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

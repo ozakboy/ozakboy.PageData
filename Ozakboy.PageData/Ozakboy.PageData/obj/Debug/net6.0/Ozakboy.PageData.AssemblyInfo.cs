@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("分頁套件")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68acb863951dae661e3f119568df7aa77c3b023d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ozakboy.PageData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ozakboy.PageData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
