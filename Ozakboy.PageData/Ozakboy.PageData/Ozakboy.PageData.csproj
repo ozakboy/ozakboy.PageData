@@ -6,6 +6,20 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageVersion>1.1.1</PackageVersion>
     <Authors>ozakboy</Authors>
+    
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    
+     <Features>strict</Features>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    
 
     <!-- 更詳細的套件描述 -->
     <Description>
@@ -25,7 +39,7 @@
     <!-- 套件相關資訊 -->
     <Title>Ozakboy.PageData - Simple .NET Pagination Library</Title>
     <PackageReleaseNotes>
-      Version 1.0.1:
+      Version 1.1.1:
       - Initial release
       - Support for  .NET 6 , .NET 7, .NET 8
       - Basic pagination functionality
@@ -64,6 +78,13 @@
   
   <ItemGroup>
     <None Include="..\..\README_zh-TW.md"></None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
