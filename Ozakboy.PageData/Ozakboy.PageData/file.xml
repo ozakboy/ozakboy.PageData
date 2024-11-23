@@ -6,58 +6,199 @@
     <members>
         <member name="T:Ozakboy.PageData.ASearchPageInfo">
             <summary>
-            搜尋指定頁數資料
+            提供分頁查詢的抽象基礎類別。包含基本的分頁參數設定。
+            Abstract base class for pagination query parameters.
             </summary>
+            <remarks>
+            此類別作為所有需要分頁功能查詢參數的基礎類別。
+            繼承此類別可獲得基本的分頁參數屬性，包括頁碼和每頁筆數限制。
+            </remarks>
         </member>
         <member name="P:Ozakboy.PageData.ASearchPageInfo.Page">
             <summary>
-            當前頁數
+            取得或設定當前頁碼。值必須大於等於1，若小於1將自動調整為1。
+            Gets or sets the current page number. Must be greater than or equal to 1.
             </summary>
+            <value>
+            當前頁碼。預設值為1。
+            The current page number. Defaults to 1.
+            </value>
         </member>
         <member name="P:Ozakboy.PageData.ASearchPageInfo.Limit">
             <summary>
-            每頁限制顯示數
+            取得或設定每頁顯示的資料筆數。
+            Gets or sets the number of items to display per page.
             </summary>
+            <value>
+            每頁顯示筆數。預設值為10。
+            Number of items per page. Defaults to 10.
+            </value>
+        </member>
+        <member name="T:Ozakboy.PageData.ToPageDataExtensions">
+            <summary>
+            提供將各種集合型別轉換為分頁資料的擴充方法。
+            Provides extension methods for converting various collection types to paginated data.
+            </summary>
+        </member>
+        <member name="M:Ozakboy.PageData.ToPageDataExtensions.ToPageData``1(System.Collections.Generic.List{``0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            將 List&lt;T&gt; 轉換為分頁資料。
+            Converts a List&lt;T&gt; to paginated data.
+            </summary>
+            <typeparam name="T">集合中項目的型別 (The type of items in the collection)</typeparam>
+            <param name="_Data">要分頁的資料集合 (The data collection to paginate)</param>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
+            <returns>分頁後的資料 (The paginated data)</returns>
+        </member>
+        <member name="M:Ozakboy.PageData.ToPageDataExtensions.ToPageData``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)">
+            <summary>
+            將 List&lt;T&gt; 轉換為分頁資料。
+            Converts a List&lt;T&gt; to paginated data.
+            </summary>
+            <typeparam name="T">集合中項目的型別 (The type of items in the collection)</typeparam>
+            <param name="_Data">要分頁的資料集合 (The data collection to paginate)</param>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
+            <returns>分頁後的資料 (The paginated data)</returns>
+        </member>
+        <member name="M:Ozakboy.PageData.ToPageDataExtensions.ToPageData``1(System.Linq.IQueryable{``0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            將 List&lt;T&gt; 轉換為分頁資料。
+            Converts a List&lt;T&gt; to paginated data.
+            </summary>
+            <typeparam name="T">集合中項目的型別 (The type of items in the collection)</typeparam>
+            <param name="_Data">要分頁的資料集合 (The data collection to paginate)</param>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
+            <returns>分頁後的資料 (The paginated data)</returns>
+        </member>
+        <member name="M:Ozakboy.PageData.ToPageDataExtensions.ToPageData``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            將 List&lt;T&gt; 轉換為分頁資料。
+            Converts a List&lt;T&gt; to paginated data.
+            </summary>
+            <typeparam name="T">集合中項目的型別 (The type of items in the collection)</typeparam>
+            <param name="_Data">要分頁的資料集合 (The data collection to paginate)</param>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
+            <returns>分頁後的資料 (The paginated data)</returns>
+        </member>
+        <member name="M:Ozakboy.PageData.ToPageDataExtensions.ToPageData``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            將 List&lt;T&gt; 轉換為分頁資料。
+            Converts a List&lt;T&gt; to paginated data.
+            </summary>
+            <typeparam name="T">集合中項目的型別 (The type of items in the collection)</typeparam>
+            <param name="_Data">要分頁的資料集合 (The data collection to paginate)</param>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
+            <returns>分頁後的資料 (The paginated data)</returns>
+        </member>
+        <member name="M:Ozakboy.PageData.ToPageDataExtensions.ToPageData``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+            將 List&lt;T&gt; 轉換為分頁資料。
+            Converts a List&lt;T&gt; to paginated data.
+            </summary>
+            <typeparam name="T">集合中項目的型別 (The type of items in the collection)</typeparam>
+            <param name="_Data">要分頁的資料集合 (The data collection to paginate)</param>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
+            <returns>分頁後的資料 (The paginated data)</returns>
         </member>
         <member name="T:Ozakboy.PageData.PageInfo">
             <summary>
-            分頁資訊
+            封裝分頁相關資訊的類別，提供完整的分頁參數和計算結果。
+            Encapsulates pagination-related information and calculations.
             </summary>
+        </member>
+        <member name="M:Ozakboy.PageData.PageInfo.#ctor">
+            <summary>
+            初始化 <see cref="T:Ozakboy.PageData.PageInfo"/> 類別的新執行個體。
+            Initializes a new instance of the <see cref="T:Ozakboy.PageData.PageInfo"/> class.
+            </summary>
+        </member>
+        <member name="M:Ozakboy.PageData.PageInfo.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            使用指定的頁碼、每頁筆數和總筆數初始化 <see cref="T:Ozakboy.PageData.PageInfo"/> 類別的新執行個體。
+            Initializes a new instance of the <see cref="T:Ozakboy.PageData.PageInfo"/> class with specified parameters.
+            </summary>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
         </member>
         <member name="P:Ozakboy.PageData.PageInfo.Page">
             <summary>
-            目前頁數
+            取得或設定目前頁碼。
+            Gets or sets the current page number.
             </summary>
         </member>
         <member name="P:Ozakboy.PageData.PageInfo.Limit">
             <summary>
-            每頁數量
+            取得或設定每頁顯示筆數。
+            Gets or sets the number of items per page.
             </summary>
         </member>
         <member name="P:Ozakboy.PageData.PageInfo.Total">
             <summary>
-            資料總比數
+            取得或設定資料總筆數。
+            Gets or sets the total number of items.
             </summary>
         </member>
         <member name="P:Ozakboy.PageData.PageInfo.TotalPage">
             <summary>
-            總頁數
+            取得或設定總頁數。根據總筆數和每頁筆數自動計算。
+            Gets or sets the total number of pages. Automatically calculated based on total items and items per page.
             </summary>
         </member>
         <member name="T:Ozakboy.PageData.VPageData`1">
             <summary>
-            分頁式資料回傳架構
+            泛型分頁資料容器，包含分頁後的資料集合和分頁資訊。
+            Generic container for paginated data, including the data collection and pagination information.
             </summary>
-            <typeparam name="T"></typeparam>
+            <typeparam name="T">資料項目的型別 (The type of items in the data collection)</typeparam>
+        </member>
+        <member name="M:Ozakboy.PageData.VPageData`1.#ctor">
+            <summary>
+            初始化 <see cref="T:Ozakboy.PageData.VPageData`1"/> 類別的新執行個體。
+            Initializes a new instance of the <see cref="T:Ozakboy.PageData.VPageData`1"/> class.
+            </summary>
+        </member>
+        <member name="M:Ozakboy.PageData.VPageData`1.#ctor(System.Collections.Generic.List{`0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            使用指定的資料集合和分頁參數初始化新執行個體。
+            Initializes a new instance with the specified data collection and pagination parameters.
+            </summary>
+            <param name="_Data">分頁後的資料集合 (The paginated data collection)</param>
+            <param name="_page">頁碼 (The page number)</param>
+            <param name="_Limit">每頁筆數 (Items per page)</param>
+            <param name="_total">資料總筆數 (Total number of items)</param>
+        </member>
+        <member name="M:Ozakboy.PageData.VPageData`1.Select``1(System.Func{`0,``0})">
+            <summary>
+            將資料轉換為另一種型別的分頁資料。
+            Transforms the data to a new type while maintaining pagination information.
+            </summary>
+            <typeparam name="TResult">目標轉換型別 (The target type to transform to)</typeparam>
+            <param name="selector">轉換函式 (The transformation function)</param>
+            <returns>轉換後的分頁資料 (The transformed paginated data)</returns>
         </member>
         <member name="P:Ozakboy.PageData.VPageData`1.PageData">
             <summary>
-            呈現資料
+            取得或設定分頁後的資料集合。
+            Gets or sets the paginated data collection.
             </summary>
         </member>
         <member name="P:Ozakboy.PageData.VPageData`1.PageInfo">
             <summary>
-            分頁資訊
+            取得或設定分頁資訊。
+            Gets or sets the pagination information.
             </summary>
         </member>
     </members>
