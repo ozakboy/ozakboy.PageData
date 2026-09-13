@@ -1,12 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0;net8.0;</TargetFrameworks>
+    <!--
+      目標框架：net6.0 / net7.0 已於 2024 年結束支援，1.2.0 起移除。
+      改為 netstandard2.0 / netstandard2.1 + net8.0 / net9.0 / net10.0，
+      netstandard2.0 讓 .NET Framework 4.6.1+ 與仍停在 net6 / net7 的專案照樣吃得到。
+      net6.0 / net7.0 reached end of life in 2024 and are dropped in 1.2.0; netstandard2.0
+      keeps .NET Framework 4.6.1+ and any lingering net6 / net7 consumer working.
+    -->
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0;net9.0;net10.0</TargetFrameworks>
+    <!-- netstandard2.0 的預設語言版本是 C# 7.3，不明確指定就用不了可為 Null 參考型別的標註 -->
+    <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageVersion>1.1.1</PackageVersion>
+    <PackageId>Ozakboy.PageData</PackageId>
+    <AssemblyName>Ozakboy.PageData</AssemblyName>
+    <RootNamespace>Ozakboy.PageData</RootNamespace>
+    <PackageVersion>1.2.0</PackageVersion>
     <Authors>ozakboy</Authors>
-    
+
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
@@ -14,12 +26,11 @@
 
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
-    
-     <Features>strict</Features>
+
+    <Features>strict</Features>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    
 
     <!-- 更詳細的套件描述 -->
     <Description>
@@ -31,19 +42,40 @@
       - Flexible page size configuration
       - Complete paging information
       - Data transformation support
+      - Zero NuGet dependencies on every target framework
     </Description>
 
     <!-- 關鍵字標籤 -->
-    <PackageTags>pagination;paging;ef-core;linq;data</PackageTags>
+    <PackageTags>pagination;paging;ef-core;linq;data;netstandard;zero-dependency</PackageTags>
 
     <!-- 套件相關資訊 -->
     <Title>Ozakboy.PageData - Simple .NET Pagination Library</Title>
+    <!-- PackageReleaseNotes 每次發版更新；與 CHANGELOG.md 的英文段落對齊 -->
     <PackageReleaseNotes>
-      Version 1.1.1:
-      - Initial release
-      - Support for  .NET 6 , .NET 7, .NET 8
-      - Basic pagination functionality
-      - Extension methods for List, IQueryable, and IEnumerable
+v1.2.0 — Retargeting release. No public API changes; upgrading needs no caller changes.
+
+BREAKING (target frameworks only):
+- Removed the net6.0 and net7.0 targets; both reached end of life in 2024. Projects still on
+  net6.0 / net7.0 resolve the netstandard2.0 asset instead and keep working, no code changes needed.
+
+ADDED:
+- New targets: netstandard2.0, netstandard2.1, net9.0, net10.0. netstandard2.0 extends reach to
+  .NET Framework 4.6.1+ and to any runtime implementing .NET Standard 2.0.
+
+CHANGED:
+- VPageData&lt;T&gt;.PageData and VPageData&lt;T&gt;.PageInfo are initialised to an empty list and an empty
+  PageInfo instead of being left null. Only the parameterless constructor is affected; every other
+  constructor already assigned both. Code that null-checked PageData after using the parameterless
+  constructor now sees an empty page rather than null.
+- Removed the Microsoft.SourceLink.GitHub package reference. SourceLink ships in the SDK since
+  .NET 8, so PublishRepositoryUrl + EmbedUntrackedSources give the same result without pulling in
+  the Microsoft.Build.Tasks.Git transitive dependency and its vulnerability advisory. Build-only change.
+
+TECHNICAL:
+- Zero NuGet dependencies on all five target frameworks.
+- First release covered by an automated test suite (MSTest).
+
+Full changelog: https://github.com/ozakboy/ozakboy.PageData/blob/main/CHANGELOG.md
     </PackageReleaseNotes>
 
     <!-- 版權宣告 -->
@@ -54,15 +86,19 @@
     <RepositoryUrl>https://github.com/ozakboy/ozakboy.PageData</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
-    <!-- 文件產生設定 -->
+    <!--
+      文件產生設定：不再把 DocumentationFile 釘死成單一檔名。
+      多目標框架下五個 TFM 會同時寫同一個檔案，平行建置互相搶檔，
+      打包出來的 XML 註解也只會剩最後一個 TFM 的版本。
+      交給 SDK 依 TFM 各自輸出到 bin\&lt;Configuration&gt;\&lt;TFM&gt;\ 下即可。
+    -->
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>file.xml</DocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
 
     <!-- 授權設定 -->
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>    
-    
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -75,16 +111,18 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Include="..\..\README_zh-TW.md"></None>
   </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+
+  <!--
+    SourceLink：1.2.0 起移除 Microsoft.SourceLink.GitHub 套件參照。
+    .NET 8 起 SourceLink 已內建於 SDK，只要有 PublishRepositoryUrl + EmbedUntrackedSources
+    就會產生完整的 repository 中繼資料與 PDB 來源對映。
+    移除的動機是它的傳遞相依 Microsoft.Build.Tasks.Git 帶有弱點公告，
+    而它只在建置期用到、對消費者沒有價值；相依樹也因此保持全空。
+    SourceLink is built into the SDK since .NET 8, so the package reference is gone.
+  -->
 
 </Project>

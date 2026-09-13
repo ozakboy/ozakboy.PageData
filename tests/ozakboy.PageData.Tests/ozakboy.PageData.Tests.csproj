@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+      同時對 net8.0 與 net10.0 跑一遍，確認套件多目標後兩端的資產都真的能被消費。
+      netstandard2.0 / 2.1 資產無法由測試專案直接參照（測試專案不能以 netstandard 為目標），
+      它們的正確性由五個 TFM 的編譯結果保證。
+      Runs against both ends of the target set; the netstandard assets are covered by compilation instead,
+      since a test project cannot target netstandard.
+    -->
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+
+    <!--
+      改用 MSTest 內建的 Microsoft.Testing.Platform 執行器，不走舊的 VSTest。
+      理由是相依政策：VSTest 那條路徑會經由 Microsoft.TestPlatform.ObjectModel 遞移帶進
+      Newtonsoft.Json —— 它掛在 Microsoft 的套件底下，但本身是第三方社群套件。
+      搭配 repo 根目錄的 global.json(test.runner)，dotnet test 才會走 MTP。
+      Uses MSTest's built-in Microsoft.Testing.Platform runner instead of the legacy VSTest path,
+      which would transitively drag in the third-party Newtonsoft.Json.
+    -->
+    <EnableMSTestRunner>true</EnableMSTestRunner>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter" Version="4.0.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Ozakboy.PageData\Ozakboy.PageData\Ozakboy.PageData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+    <Using Include="Ozakboy.PageData" />
+  </ItemGroup>
+
+</Project>

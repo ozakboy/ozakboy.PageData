@@ -3,80 +3,88 @@
 [![nuget](https://img.shields.io/badge/nuget-ozakboy.PageData-blue)](https://www.nuget.org/packages/Ozakboy.PageData/) 
 [![github](https://img.shields.io/badge/github-ozakboy.PageData-blue)](https://github.com/ozakboy/ozakboy.PageData)
 
-[English](README.md) | [ÁcÅé¤¤¤å](README_zh-TW.md) 
+[English](README.md) | [ç¹é«”ä¸­æ–‡](README_zh-TW.md) 
 
-¾A¥Î©ó .NET À³¥Îµ{¦¡ªº»´¶q¯Å¤À­¶¨ç¦¡®w¡C¤ä´©¦hºØ¸ê®Æ¨Ó·½¡]¥]¬A Lists¡BIQueryable ©M IEnumerable¡^ªº¤À­¶¥\¯à¡AÅı±z¯à°÷»´ÃP¦a¦bÀ³¥Îµ{¦¡¤¤¹ê²{¤À­¶¡C
+é©ç”¨æ–¼ .NET æ‡‰ç”¨ç¨‹å¼çš„è¼•é‡ç´šåˆ†é å‡½å¼åº«ã€‚æ”¯æ´å¤šç¨®è³‡æ–™ä¾†æºï¼ˆåŒ…æ‹¬ Listsã€IQueryable å’Œ IEnumerableï¼‰çš„åˆ†é åŠŸèƒ½ï¼Œè®“æ‚¨èƒ½å¤ è¼•é¬†åœ°åœ¨æ‡‰ç”¨ç¨‹å¼ä¸­å¯¦ç¾åˆ†é ã€‚
 
-## ¥D­n¯SÂI
+## ä¸»è¦ç‰¹é»
 
-- Â²³æª½Æ[ªº¤À­¶¹ê²{
-- ¤ä´©¦hºØ¸ê®Æ¨Ó·½«¬§O¡]List<T>¡BIQueryable<T>¡BIEnumerable<T>¡^
-- ÆF¬¡ªº¤À­¶¤j¤p°t¸m
-- §¹¾ãªº¤À­¶¸ê°T
-- ¸ê®ÆÂà´«¤ä´©
-- ÂX®i¤èªk«K©ó¾ã¦X
-- ¬Û®e©ó Entity Framework Core ¬d¸ß
+- ç°¡å–®ç›´è§€çš„åˆ†é å¯¦ç¾
+- æ”¯æ´å¤šç¨®è³‡æ–™ä¾†æºå‹åˆ¥ï¼ˆList<T>ã€IQueryable<T>ã€IEnumerable<T>ï¼‰
+- éˆæ´»çš„åˆ†é å¤§å°é…ç½®
+- å®Œæ•´çš„åˆ†é è³‡è¨Š
+- è³‡æ–™è½‰æ›æ”¯æ´
+- æ“´å±•æ–¹æ³•ä¾¿æ–¼æ•´åˆ
+- ç›¸å®¹æ–¼ Entity Framework Core æŸ¥è©¢
 
-## ¦w¸Ë¤è¦¡
+## å®‰è£æ–¹å¼
 
-³z¹L NuGet Package Manager ¦w¸Ë¡G
+é€é NuGet Package Manager å®‰è£ï¼š
 
 ```bash
 Install-Package Ozakboy.PageData
 ```
 
-©Î¨Ï¥Î .NET CLI¡G
+æˆ–ä½¿ç”¨ .NET CLIï¼š
 
 ```bash
 dotnet add package Ozakboy.PageData
 ```
 
-## ¤ä´©ªº®Ø¬[ª©¥»
+## æ”¯æ´çš„æ¡†æ¶ç‰ˆæœ¬
 
-- .NET 6.0
-- .NET 7.0
+- .NET Standard 2.0
+- .NET Standard 2.1
 - .NET 8.0
+- .NET 9.0
+- .NET 10.0
 
-## ®Ö¤ß¤¸¥ó
+äº”å€‹ç›®æ¨™æ¡†æ¶çš„ç›¸ä¾æ¨¹éƒ½æ˜¯ç©ºçš„ï¼Œå¥—ä»¶æœ¬èº«ä¸å¸¶ä»»ä½• NuGet ç›¸ä¾ã€‚
+
+é‚„åœåœ¨ .NET 6.0 / .NET 7.0 çš„å°ˆæ¡ˆç…§æ¨£èƒ½ç”¨ï¼šNuGet æœƒè‡ªå‹•æŒ‘ .NET Standard 2.0 è³‡ç”¢ï¼Œ
+ä¸å¿…æ”¹ä»»ä½•ç¨‹å¼ç¢¼ã€‚1.2.0 ç§»é™¤ net6.0 èˆ‡ net7.0 é€™å…©å€‹ç›®æ¨™ï¼Œæ˜¯å› ç‚ºå…©è€…éƒ½å·²çµæŸæ”¯æ´ã€‚
+.NET Standard 2.0 è³‡ç”¢åŒæ™‚æ¶µè“‹ .NET Framework 4.6.1 ä»¥å¾Œçš„ç‰ˆæœ¬ã€‚
+
+## æ ¸å¿ƒå…ƒä»¶
 
 ### 1. PageInfo
-¥]§t°ò¥»¤À­¶¸ê°T¡G
-- ·í«e­¶½X
-- ¨C­¶¶µ¥Ø¼Æ¡]Limit¡^
-- Á`¶µ¥Ø¼Æ
-- Á`­¶¼Æ
+åŒ…å«åŸºæœ¬åˆ†é è³‡è¨Šï¼š
+- ç•¶å‰é ç¢¼
+- æ¯é é …ç›®æ•¸ï¼ˆLimitï¼‰
+- ç¸½é …ç›®æ•¸
+- ç¸½é æ•¸
 
 ### 2. VPageData<T>
-ªx«¬Ãş§O¡A¥]§t¡G
-- ¤À­¶«áªº¸ê®Æ¡]List<T>¡^
-- ¤À­¶¸ê°T¡]PageInfo¡^
+æ³›å‹é¡åˆ¥ï¼ŒåŒ…å«ï¼š
+- åˆ†é å¾Œçš„è³‡æ–™ï¼ˆList<T>ï¼‰
+- åˆ†é è³‡è¨Šï¼ˆPageInfoï¼‰
 
 ### 3. ASearchPageInfo
-·j´M°Ñ¼Æªº©â¶H°òÃş¡G
-- °ò¥»­¶½XÄİ©Ê
-- ¹w³]¨C­¶­­¨î¼ÆÄİ©Ê
+æœå°‹åƒæ•¸çš„æŠ½è±¡åŸºé¡ï¼š
+- åŸºæœ¬é ç¢¼å±¬æ€§
+- é è¨­æ¯é é™åˆ¶æ•¸å±¬æ€§
 
-## ¨Ï¥Î½d¨Ò
+## ä½¿ç”¨ç¯„ä¾‹
 
-### °ò¥»¨Ï¥Î¤è¦¡
+### åŸºæœ¬ä½¿ç”¨æ–¹å¼
 
 ```csharp
 using Ozakboy.PageData;
 
-// ¨Ï¥Î List<T>
-var myList = new List<string>() { "¶µ¥Ø1", "¶µ¥Ø2", "¶µ¥Ø3", ... };
+// ä½¿ç”¨ List<T>
+var myList = new List<string>() { "é …ç›®1", "é …ç›®2", "é …ç›®3", ... };
 var pagedResult = myList.ToPageData(page: 1, limit: 10);
 
-// ¨Ï¥Î IQueryable¡]¨Ò¦p Entity Framework¡^
+// ä½¿ç”¨ IQueryableï¼ˆä¾‹å¦‚ Entity Frameworkï¼‰
 var query = dbContext.Users.Where(u => u.IsActive);
 var pagedUsers = query.ToPageData(page: 1, limit: 10);
 
-// ¨Ï¥Î IEnumerable
+// ä½¿ç”¨ IEnumerable
 IEnumerable<Product> products = GetProducts();
 var pagedProducts = products.ToPageData(page: 1, limit: 10);
 ```
 
-### ¸ê®ÆÂà´«½d¨Ò
+### è³‡æ–™è½‰æ›ç¯„ä¾‹
 
 ```csharp
 var pagedResult = query.ToPageData(1, 10)
@@ -87,7 +95,7 @@ var pagedResult = query.ToPageData(1, 10)
     });
 ```
 
-### ¦Û­q·j´M°Ñ¼Æ
+### è‡ªè¨‚æœå°‹åƒæ•¸
 
 ```csharp
 public class UserSearchParams : ASearchPageInfo
@@ -96,29 +104,29 @@ public class UserSearchParams : ASearchPageInfo
     public bool? IsActive { get; set; }
 }
 
-// ¨Ï¥Î¤è¦¡
+// ä½¿ç”¨æ–¹å¼
 var searchParams = new UserSearchParams 
 {
     Page = 1,
     Limit = 10,
-    SearchName = "±i"
+    SearchName = "å¼µ"
 };
 ```
 
-### ¦s¨ú¤À­¶¸ê°T
+### å­˜å–åˆ†é è³‡è¨Š
 
 ```csharp
 var result = query.ToPageData(1, 10);
 
-Console.WriteLine($"¥Ø«e­¶¼Æ¡G{result.PageInfo.Page}");
-Console.WriteLine($"¨C­¶¶µ¥Ø¼Æ¡G{result.PageInfo.Limit}");
-Console.WriteLine($"Á`¶µ¥Ø¼Æ¡G{result.PageInfo.Total}");
-Console.WriteLine($"Á`­¶¼Æ¡G{result.PageInfo.TotalPage}");
+Console.WriteLine($"ç›®å‰é æ•¸ï¼š{result.PageInfo.Page}");
+Console.WriteLine($"æ¯é é …ç›®æ•¸ï¼š{result.PageInfo.Limit}");
+Console.WriteLine($"ç¸½é …ç›®æ•¸ï¼š{result.PageInfo.Total}");
+Console.WriteLine($"ç¸½é æ•¸ï¼š{result.PageInfo.TotalPage}");
 ```
 
-## ÂX®i¤èªk
+## æ“´å±•æ–¹æ³•
 
-¥»¨ç¦¡®w³q¹L `ToPageDataExtensions` ´£¨Ñ¦h­ÓÂX®i¤èªk¡G
+æœ¬å‡½å¼åº«é€šé `ToPageDataExtensions` æä¾›å¤šå€‹æ“´å±•æ–¹æ³•ï¼š
 
 - `ToPageData<T>(this List<T>, int page, int limit)`
 - `ToPageData<T>(this List<T>, int page, int limit, int total)`
@@ -127,14 +135,14 @@ Console.WriteLine($"Á`­¶¼Æ¡G{result.PageInfo.TotalPage}");
 - `ToPageData<T>(this IEnumerable<T>, int page, int limit)`
 - `ToPageData<T>(this IEnumerable<T>, int page, int limit, int total)`
 
-## ±ÂÅv±ø´Ú
+## æˆæ¬Šæ¢æ¬¾
 
-¥»±M®×¨Ì¾Ú LICENSE ÀÉ®×¤¤«ü©wªº±ø´Ú±ÂÅv¡C
+æœ¬å°ˆæ¡ˆä¾æ“š LICENSE æª”æ¡ˆä¸­æŒ‡å®šçš„æ¢æ¬¾æˆæ¬Šã€‚
 
-## °Ñ»P°^Äm
+## åƒèˆ‡è²¢ç»
 
-Åwªï´£¥æ°^Äm¡I½ĞÀH®É´£¥æ Pull Request¡C
+æ­¡è¿æäº¤è²¢ç»ï¼è«‹éš¨æ™‚æäº¤ Pull Requestã€‚
 
-## ¤ä´©»P¨ó§U
+## æ”¯æ´èˆ‡å”åŠ©
 
-¦pªG±z¹J¨ì¥ô¦ó°İÃD©Î¦³¥ô¦óºÃ°İ¡A½Ğ¦b GitHub Àx¦s®w¤¤«Ø¥ß Issue¡C
+å¦‚æœæ‚¨é‡åˆ°ä»»ä½•å•é¡Œæˆ–æœ‰ä»»ä½•ç–‘å•ï¼Œè«‹åœ¨ GitHub å„²å­˜åº«ä¸­å»ºç«‹ Issueã€‚

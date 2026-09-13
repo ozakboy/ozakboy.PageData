@@ -33,9 +33,18 @@ dotnet add package Ozakboy.PageData
 
 ## Supported Frameworks
 
-- .NET 6.0
-- .NET 7.0
+- .NET Standard 2.0
+- .NET Standard 2.1
 - .NET 8.0
+- .NET 9.0
+- .NET 10.0
+
+The package has no NuGet dependencies on any of them.
+
+Projects on .NET 6.0 or .NET 7.0 keep working through the .NET Standard 2.0 asset, which NuGet picks
+automatically — no code changes needed. The dedicated net6.0 and net7.0 targets were removed in 1.2.0
+because both frameworks reached end of life. The .NET Standard 2.0 asset also covers
+.NET Framework 4.6.1 and later.
 
 ## Core Components
 

@@ -42,7 +42,7 @@ foreach (var item in UserPageData.PageData)
 
 public class User
 {
-    public string name { get; set; }
+    public string name { get; set; } = string.Empty;
 
     public int Age { get; set; }
 }
