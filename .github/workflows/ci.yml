@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  # sln 不在 repo 根目錄,而在同名子資料夾底下;測試專案 tests/ 由這個 sln 一併參照。
+  SOLUTION: Ozakboy.PageData/Ozakboy.PageData.sln
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # SourceLink 需要完整歷史
+
+      # 測試專案同時對 net8.0 與 net10.0 執行,兩個執行階段都要裝。
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      # 本 repo 沒有 packages.lock.json,setup-dotnet 內建的 cache 無從算出 key,
+      # 因此直接快取 NuGet 全域套件資料夾,以所有 csproj 的雜湊當 key。
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: Restore
+        run: dotnet restore $SOLUTION
+
+      - name: Build
+        run: dotnet build $SOLUTION --configuration Release --no-restore
+
+      # 測試專案走 Microsoft.Testing.Platform(見 tests 的 csproj 與根目錄 global.json)。
+      # 兩個差異:sln 必須用 --solution 指定(MTP 路徑不吃位置參數,會直接拒絕),
+      # 且不認得 VSTest 的 --logger。此處也不加 --report-trx:本 repo 沒有參照
+      # Microsoft.Testing.Extensions.TrxReport,加了會被當成未知選項而整個測試回合失敗。
+      - name: Test
+        run: dotnet test --solution $SOLUTION --configuration Release --no-build --verbosity normal
