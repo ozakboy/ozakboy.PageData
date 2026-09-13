@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <!--
@@ -16,7 +16,7 @@
     <PackageId>Ozakboy.PageData</PackageId>
     <AssemblyName>Ozakboy.PageData</AssemblyName>
     <RootNamespace>Ozakboy.PageData</RootNamespace>
-    <PackageVersion>1.2.0</PackageVersion>
+    <PackageVersion>1.2.1</PackageVersion>
     <Authors>ozakboy</Authors>
 
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -52,6 +52,14 @@
     <Title>Ozakboy.PageData - Simple .NET Pagination Library</Title>
     <!-- PackageReleaseNotes 每次發版更新；與 CHANGELOG.md 的英文段落對齊 -->
     <PackageReleaseNotes>
+v1.2.1 — Bug fix.
+
+FIXED:
+- PageInfo(page, limit, total) divided by zero when limit was 0: double Infinity cast to int is
+  undefined behaviour and yielded int.MinValue as TotalPage. A limit or total of zero or less now
+  gives TotalPage = 0. The calculation is exposed as PageInfo.CalculateTotalPage(total, limit) and
+  uses integer arithmetic (no double), with long intermediate to avoid overflow near int.MaxValue.
+
 v1.2.0 — Retargeting release. No public API changes; upgrading needs no caller changes.
 
 BREAKING (target frameworks only):

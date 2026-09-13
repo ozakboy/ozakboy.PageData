@@ -1,4 +1,4 @@
-namespace Ozakboy.PageData.Tests;
+﻿namespace Ozakboy.PageData.Tests;
 
 /// <summary>
 /// <see cref="PageInfo"/> 的建構與總頁數計算。
@@ -39,11 +39,29 @@ public sealed class PageInfoTests
     [DataRow(20, 10, 2)]
     [DataRow(21, 10, 3)]
     [DataRow(7, 3, 3)]
+    [DataRow(int.MaxValue, 1, int.MaxValue)]
     public void TotalPageRoundsUp(int total, int limit, int expectedTotalPage)
     {
         var info = new PageInfo(1, limit, total);
 
         Assert.AreEqual(expectedTotalPage, info.TotalPage);
+    }
+
+    /// <summary>
+    /// 每頁筆數或總筆數小於等於 0 時,總頁數是 0,而不是除以零的垃圾值(1.2.0 以前為 int.MinValue)。
+    /// </summary>
+    [TestMethod]
+    [DataRow(5, 0, 0)]
+    [DataRow(5, -1, 0)]
+    [DataRow(0, 0, 0)]
+    [DataRow(-5, 10, 0)]
+    [DataRow(-5, 0, 0)]
+    public void TotalPageIsZeroWhenThereIsNothingToPage(int total, int limit, int expectedTotalPage)
+    {
+        var info = new PageInfo(1, limit, total);
+
+        Assert.AreEqual(expectedTotalPage, info.TotalPage);
+        Assert.AreEqual(info.TotalPage, PageInfo.CalculateTotalPage(total, limit));
     }
 
     [TestMethod]

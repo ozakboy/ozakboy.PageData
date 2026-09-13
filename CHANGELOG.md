@@ -8,6 +8,17 @@ All notable changes to this package are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the versioning follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.2.1] - 2026-09-13
+
+### 問題修正 / Fixed
+
+- `PageInfo(page, limit, total)` 在 `limit` 為 0 時除以零:double 的 Infinity 轉 `int` 是未定義行為,實務上 `TotalPage` 會變成
+  `int.MinValue`。現在 `limit` 或 `total` 小於等於 0 時 `TotalPage` 一律為 0。計算式公開為 `PageInfo.CalculateTotalPage(total, limit)`,
+  改用整數運算(不經過 double),中間值用 `long` 避免接近 `int.MaxValue` 時溢位。
+  `PageInfo(page, limit, total)` divided by zero when `limit` was 0: double Infinity cast to `int` is undefined and yielded
+  `int.MinValue`. A `limit` or `total` of zero or less now gives `TotalPage = 0`. The calculation is exposed as
+  `PageInfo.CalculateTotalPage(total, limit)` and uses integer arithmetic with a `long` intermediate.
+
 ## [1.2.0] - 2026-09-13
 
 換目標框架的版本。公開 API 沒有任何變更,升級不需要改呼叫端程式碼。

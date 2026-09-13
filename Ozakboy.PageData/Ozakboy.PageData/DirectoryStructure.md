@@ -4,7 +4,7 @@
     📁 Abstract/
       📝 ASearchPageInfo.cs (486 B)
     📁 Extensions/
-      📝 ToPageData.cs (1.26 KB)
+      📝 ToPageDataExtensions.cs
     📁 Models/
       📝 PageInfo.cs (904 B)
       📝 VPageData.cs (1.62 KB)
